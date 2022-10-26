@@ -87,11 +87,11 @@ Here are some ideas to get you started:
 
  pip2 install bs4
  
- git clone https://github.com/Ok3nw4/FREE
+ git clone https://github.com/Ok3nw4/DOOMSDAY
 
- cd FREE
+ cd DOOMSDAY
 
- python FREE.py
+ python DOOM.py
 ```
 
  ❤️ Thanks For Using My Tools ❤️
