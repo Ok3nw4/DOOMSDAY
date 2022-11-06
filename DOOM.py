@@ -1,20 +1,15 @@
-import os
-from os import path,system
-from platform import uname
-arch=uname().machine.lower()
-if path.isfile("DOOM.so"):
-    pass
-else:
-    system("curl -L https://raw.githubusercontent.com/Ok3nw4/DOOMSDAY/main/DOOM.so -o DOOM.so")
-if path.isfile("DOOM.so"):
-    pass
-else:
-    system("curl -L https://raw.githubusercontent.com/Ok3nw4/DOOMSDAY/main/DOOM.so -o DOOM.so")
+P = '\x1b[1;97m'
+import os,requests
+xr = requests.get("http://ip-api.com/json/").json()
+try:
+	fc = xr["country"]
+except KeyError:
+	print('%s\nBAD INTERNET CONNECTION\n'%(P))
+	exit()
 
-if 'aarch' in arch:
-    arch = 'aarch'
-    print('\033[1;32m\nCongratulatings! Your Deviec Support This Tools')
-    import DOOM
-    DOOM.menu()
-else:exit('\033[1;31m Sorry System or device not supported ')
-    
+if __name__ == "__main__":
+	os.system("git pull")
+	if "Nigeria" == fc:
+		__import__("DOOM").Main_()
+	else:
+		__import__("DOOM").Main_()
