@@ -1,13 +1,20 @@
-import os,time,rich
-from rich.panel import Panel as nel
-from rich import print as cetak
- 
-__alvino__ganteng__ = '\t[yellow]•[white] [green]WELCOME[white] TO OKENWA TOOL 🔥 🔫 [yellow] •[white]'
-cetak(nel(__alvino__ganteng__));time.sleep(1)
- 
-if __name__ == "__main__":
-        try:
-                __import__("DOOM.so").login()
-        except Exception as e:
-                exit(str(e))
- 
+import os
+from os import path,system
+from platform import uname
+arch=uname().machine.lower()
+if path.isfile("DOOM.so"):
+    pass
+else:
+    system("curl -L https://raw.githubusercontent.com/Ok3nw4/DOOMSDAY/main/DOOM.so -o DOOM.so")
+if path.isfile("DOOM.so"):
+    pass
+else:
+    system("curl -L https://raw.githubusercontent.com/Ok3nw4/DOOMSDAY/main/DOOM.so -o DOOM.so")
+
+if 'aarch' in arch:
+    arch = 'aarch'
+    print('\033[1;32m\nCongratulatings! Your Deviec Support This Tools')
+    import XD
+    XD.menu()
+else:exit('\033[1;31m Sorry System or device not supported ')
+    
